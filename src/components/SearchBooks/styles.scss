@@ -1,0 +1,12 @@
+.postInSearch {
+  display: flex;
+  justify-content: center;
+  border: 1px solid yellowgreen;
+  padding: .25em;
+  margin: .25em;
+
+  .image {
+    width: 30px;
+    aspect-ratio: 1/1;
+  }
+}

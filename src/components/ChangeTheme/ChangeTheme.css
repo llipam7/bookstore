@@ -1,0 +1,14 @@
+.theme-wrapper {
+    width: 100vw;
+    height: 100vh;
+}
+
+.light {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.dark {
+    background-color: rgb(58, 58, 58);
+    color: white;
+}

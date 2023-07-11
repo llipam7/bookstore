@@ -1,0 +1,22 @@
+.absent {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.absent span {
+  font-size: 50px;
+  background: #2E2F45;
+  display: table;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.absent p {
+    text-align: center;
+    text-decoration: none;
+}
+.absent p:hover {
+    color: white;
+}
