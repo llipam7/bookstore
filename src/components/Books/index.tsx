@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { BookType, getBooks } from '../../services/bookService'
-import styles from './styles.module.scss'
+import styles from './styles.css'
 import { useSelector } from 'react-redux'
 import { selectBooks } from '../../store/books/selectors'
 import { useDispatch } from 'react-redux'
@@ -12,12 +11,12 @@ export const AllBooks = () => {
   const books = useSelector(selectBooks)
   const dispatch = useDispatch<AppDispatch>()
   useEffect(() => {
-    getBooks().then(res => dispatch(setBooks(res)))
+    // getBooks().then(res => dispatch(setBooks(res)))
     dispatch(loadBooks())
   }, [])
 
   return (
-    <div className={styles.list}>
+    <div className='.list'>
       {
         books.list.map(book => (
           <div key={book.isbn13} className={styles.book}>

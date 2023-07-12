@@ -9,7 +9,7 @@ export const clearSearchAction = () : SearchActionType => {
   }
 }
 
-const setBooks = (books: BookType[]) : SearchActionType => {
+const setBooks = (books: ResponseType) : SearchActionType => {
   return {
     type: "LOAD_SEARCH_POSTS",
     payload: books
@@ -19,8 +19,8 @@ const setBooks = (books: BookType[]) : SearchActionType => {
 export const loadSearchBooksAction = (): AppThunk => {
   return (dispatch, getState) => {
     const search = getState().search.search
-    getBooks()
-      .then(books => dispatch(setBooks(books)))
+    getBooks(search)
+      .then(books => dispatch(setBooks(books.)))
   }
 }
 
@@ -31,7 +31,7 @@ export const setSearchValueAction = (search: string) : AppThunk => {
       payload: search
     })
     if (search) {
-      dispatch(loadSearchBooksAction())     // запись идентична строкам 37-38
+      dispatch(loadSearchBooksAction())
     } else {
       dispatch(clearSearchAction())
     }

@@ -2,15 +2,15 @@ import { AppThunk } from '..'
 import { BookType, getBooks } from '../../services/bookService'
 import { BooksActionType } from './types'
 
-export const setBooks = ( posts: BookType[] ): BooksActionType => {
+export const setBooks = ( books: BookType[] ): BooksActionType => {
   return {
-    type: 'LOAD_POSTS',
-    payload: posts
+    type: 'LOAD_BOOKS',
+    payload: books
   }
 }
 
 export const loadBooks = () :AppThunk => {
   return (dispatch, getState) => {
-    getBooks().then(res => dispatch(setBooks(res)))
+    getBooks().then(books => dispatch(setBooks(books)))
   }
 }

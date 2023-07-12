@@ -15,9 +15,9 @@ const SingleBookPage = () => {
         <h1>Single book</h1>
       </div>
 
-      <div>
+      {/* <div>
         <h2 onClick={onBackClick}>HOME PAGE</h2>
-      </div>
+      </div> */}
 
       <BookItem />
     </>
