@@ -1,0 +1,16 @@
+.sign {
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+}
+.link {
+  color: rgba(50, 49, 49, 0.466);
+  text-decoration: none;
+}
+.link.active {
+  color: black;
+}
+
+
+
+

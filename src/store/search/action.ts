@@ -9,9 +9,9 @@ export const clearSearchAction = () : SearchActionType => {
   }
 }
 
-const setBooks = (books: ResponseType) : SearchActionType => {
+const setSearchBooks = (books: BookType[]) : SearchActionType => {
   return {
-    type: "LOAD_SEARCH_POSTS",
+    type: 'LOAD_SEARCH_POSTS',
     payload: books
   }
 }
@@ -20,7 +20,7 @@ export const loadSearchBooksAction = (): AppThunk => {
   return (dispatch, getState) => {
     const search = getState().search.search
     getBooks(search)
-      .then(books => dispatch(setBooks(books.)))
+      .then(books => dispatch(setSearchBooks(books)))
   }
 }
 

@@ -11,6 +11,7 @@ export const setBooks = ( books: BookType[] ): BooksActionType => {
 
 export const loadBooks = () :AppThunk => {
   return (dispatch, getState) => {
-    getBooks().then(books => dispatch(setBooks(books)))
+    getBooks()
+      .then(books => dispatch(setBooks(books)))
   }
 }

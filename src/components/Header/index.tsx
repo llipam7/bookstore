@@ -15,6 +15,10 @@ const Header = () => {
       <NavLink to='/search' className='link'>
         search
       </NavLink>
+      <NavLink to='/sign-in' className='link'>
+        Sign In
+      </NavLink>
+
     </div>
   )
 }
