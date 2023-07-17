@@ -1,6 +1,6 @@
 import { configureStore, Action } from '@reduxjs/toolkit'
 import { combineReducers } from 'redux'
-import { CartReducer } from './favPosts/reducer'
+import { CartReducer } from './cart/reducer'
 import { reducer } from './theme/reducer'
 import { BooksReducer } from './books/reducer'
 import thunkMiddleware, {ThunkAction} from 'redux-thunk'

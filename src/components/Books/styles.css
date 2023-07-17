@@ -1,30 +1,53 @@
-.list {
-  display: grid;
-  grid-template-columns: repeat(3, 2fr)
+@font-face {
+	font-family: 'VT-323';
+	src: url(../../fonts/VT323/VT323-Regular.ttf);
 }
 
-.post {
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr)
+}
+
+.book {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px outset rgb(210, 144, 59);
-  border-radius: 2em;
+  justify-content: space-between;
+  border: 2px outset silver;
+  font-family: 'VT-323';
+  border-radius: 10px;
   padding: 4px;
   margin: 4px;
-  opacity: .8;
 }
-.post:hover {
+.book:hover {
   transition: .2s;
   border: 3px outset rgb(210, 144, 59);
-  opacity: 1;
 }
 
-.post h2 {
-  width: 100%;
+.book h2 {
+  width: 85%;
+  text-align: center;
   cursor: pointer;
-  flex-grow: 1;
+  text-decoration:none;
+  font-size: 24px;
 }
 
-.post img {
+.book img {
   width: 100%;
+}
+
+.price {
+  display: flex;
+  justify-content: space-around;
+}
+.price p {
+ margin-right: 80px;
+}
+.price button {
+  background-color: rgb(240, 210, 59);
+  border-radius: 5px;
+  font-family: 'VT-323';
+  width: 100px;
+  height: 30px;
 }

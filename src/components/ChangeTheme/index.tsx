@@ -4,6 +4,9 @@ import { AppDispatch } from '../../store'
 import './ChangeTheme.css'
 import { selectTheme } from '../../store/theme/selectors'
 import { setDarkThemeAction, setLightThemeAction } from '../../store/theme/actions'
+import day from '../../assets/day.svg'
+import night from '../../assets/moon.svg'
+
 
 export const ChangeTheme = () => {
     const state = useSelector(selectTheme)
@@ -27,9 +30,15 @@ export const ChangeTheme = () => {
     }
 
     return (
-        <div className={'theme-wrapper ' + state.theme}>
-            <button onClick={() => onClick('light')}>Светлая</button>
-            <button onClick={() => onClick('dark')}>Тёмная</button>
+        <div className={'outlet' + ' ' + state.theme}>
+            <button onClick={() => onClick('light')}>
+                <img src={day}/>
+                Светлая
+            </button>
+            <button onClick={() => onClick('dark')}>
+                <img src={night}/>
+                Тёмная
+            </button>
         </div>
     )
 }

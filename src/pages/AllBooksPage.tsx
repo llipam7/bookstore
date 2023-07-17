@@ -5,7 +5,7 @@ const AllBooksPage = () => {
   return (
     <>
       <div>
-        <h1>All books</h1>
+        <h1>NEW RELEASES BOOKS</h1>
       </div>
 
       <AllBooks />

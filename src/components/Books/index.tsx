@@ -1,30 +1,43 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import styles from './styles.css'
+import './styles.css'
 import { useSelector } from 'react-redux'
 import { selectBooks } from '../../store/books/selectors'
 import { useDispatch } from 'react-redux'
-import { loadBooks, setBooks } from '../../store/books/actions'
+import { loadBooksAction, setBooksAction } from '../../store/books/actions'
 import { AppDispatch } from '../../store'
+import { BookType } from '../../services/bookService'
+import { addToCartAction } from '../../store/favouritePotsts/action'
 
 export const AllBooks = () => {
   const books = useSelector(selectBooks)
   const dispatch = useDispatch<AppDispatch>()
   useEffect(() => {
     // getBooks().then(res => dispatch(setBooks(res)))
-    dispatch(loadBooks())
+    dispatch(loadBooksAction())
   }, [])
 
+  const setCart = (book: BookType) => {
+    dispatch(addToCartAction(book))
+}
+
   return (
-    <div className='.list'>
+    <div className='list'>
       {
         books.list.map(book => (
-          <div key={book.isbn13} className={styles.book}>
-            <h2>
-              <Link to={`/books/${book.isbn13}`}>{book.title}</Link>
-            </h2>
+          <div key={book.isbn13} className='book'>
+            <Link to={`/books/${book.isbn13}`}>
             <img src={book.image} alt={`THERE SHOULD HAVE BEEN THE BOOK "${book.title}"`} />
-            <p>{book.price}</p>
+            <h2>
+              {book.title.toUpperCase()}
+            </h2>
+            </Link>
+            <div className='price'>
+              <p>{book.price}</p>
+              <button onClick={() => setCart(book)}> 
+                ADD TO CART
+              </button> 
+            </div>
           </div>
         ))
       }

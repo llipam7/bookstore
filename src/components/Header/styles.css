@@ -1,23 +1,86 @@
 .header {
-  display: flex;
   width: 100%;
-  height: 3em;
-  background-color: gold;
+  height: 50px;
+  background-color: rgb(53, 139, 252);
+  display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-}
-.header input {
-  flex-grow: 1;
-  width: 100%;
+  position: sticky;
+  top: 0;
+  opacity: 1;
 }
 .header .link {
-  margin: 0 .25em;
-  text-decoration: none
+  text-decoration: none;
+  font-weight: 600;
+  color: rgb(19, 19, 96);
+  margin-left: 200px;
+}
+.link h1 {
+  font-weight: 700;
+  font-style: oblique;
+}
+.input {
+  display: flex;
+  margin: 0 70px;
+}
+.header .input input {
+  width: 400px;
+  height: 70%;
+  border-radius: 5px;
+}
+.header img {
+  width: 20px;
+  aspect-ratio: 1/1;
+  margin-left: 5px;
 }
 
-.header .link.active {
-  color: rgb(36, 128, 149);
-  font-weight: 600;
-  font-style: italic;
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.outlet {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0 200px;
+}
+
+.footer {
+  display: flex;
+  background-color: rgb(41, 121, 225);
+  color: azure;
+  display: flex;
+  width: 100%;
+  height: 3em;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.theme-wrapper {
+  background-color: maroon;
+}
+img {
+  width: 30px;
+  aspect-ratio: 1/1;
+}
+button {
+  width: 40px;
+  aspect-ratio: 1/1;
+}
+.light {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.dark {
+  background-color: rgb(10, 8, 8);
+  color: white;
+}
+.changeTheme button {
+  border-radius: 30px;
 }

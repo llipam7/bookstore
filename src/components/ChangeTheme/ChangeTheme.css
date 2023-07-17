@@ -1,8 +1,14 @@
 .theme-wrapper {
-    width: 100vw;
-    height: 100vh;
+    background-color: maroon;
 }
-
+img {
+    width: 30px;
+    aspect-ratio: 1/1;
+}
+button {
+    width: 40px;
+    aspect-ratio: 1/1;
+}
 .light {
     background-color: whitesmoke;
     color: black;

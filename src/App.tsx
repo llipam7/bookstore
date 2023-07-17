@@ -10,6 +10,8 @@ import { SearchPage } from './pages/SearchPage'
 import SignInPage from './pages/SignInPage'
 import SignUpPage from './pages/SinpUpPage'
 import LayoutSign from './components/LayoutSign'
+import CartPage from './pages/CartPage'
+import ResetPasswordPage from './pages/ResetPasswordPage'
 
 function App() {
 	return (
@@ -20,9 +22,12 @@ function App() {
 						<Route index element={<AllBooksPage />} />
 						<Route path='books/:bookId' element={<SingleBookPage />} />
 						<Route path='search/' element={<SearchPage />} />
+						<Route path='cart/' element={<CartPage />} />
 						{/* <Route path='sign-in/' element={<LayoutSign />}> */}
-						<Route path='sign-in' element={<SignInPage />} />
+						<Route path='sign-in/' element={<SignInPage />} />
 						<Route path='sign-up/' element={<SignUpPage />} />
+						<Route path='sign-in/reset_password/' element={<ResetPasswordPage />} />
+
 						{/* </Route> */}
 
 					</Route>

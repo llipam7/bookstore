@@ -7,6 +7,24 @@ export type BookType = {
   url: string
 }
 
+export type SingleBookType = {
+  error: number
+  title: string
+  subtitle: string
+  authors: string
+  publisher: string
+  isbn10: number
+  isbn13: number
+  pages: number
+  year: number
+  rating: number
+  desc: string
+  price: string
+  image: string
+  url: string
+  pdf: {}
+}
+
 export type ResponseType = {
   total: number
   page?: number 
@@ -33,9 +51,9 @@ export const getSearchBooks = (search:string): Promise<BookType[]> => {
 })}
 
 
-export const getBook = (isbn13: string): Promise<BookType> => {
+export const getBook = (isbn13: string): Promise<SingleBookType> => {
   return fetch('https://api.itbook.store/1.0/books/' + isbn13)
     .then(response => response.json())
-    .then((result: BookType) => result)
+    .then((result: SingleBookType) => result)
 }
 

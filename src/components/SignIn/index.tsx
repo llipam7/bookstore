@@ -1,6 +1,7 @@
 import React from 'react'
 import SignMenu from '../LayoutSign'
 import './styles.css'
+import { NavLink } from 'react-router-dom'
 
 const SignIn = () => {
   
@@ -10,13 +11,18 @@ const SignIn = () => {
         <form className='sign_in'>
           <label htmlFor="">
               Email
-              <input type='text' placeholder='email' autoFocus/>
+              <input type='text' placeholder='Your email' autoFocus/>
           </label>
           <label htmlFor="">
               Password
-              <input type='text' placeholder='password'/>
+              <input type='text' placeholder='Your password'/>
           </label>
-          <input type='submit' value='Sign In'/>
+          <NavLink to='reset_password/' className='reset'>
+            Forgot password?
+          </NavLink>
+          <div className='submit'>
+            <input type='submit'  value='Sign In'/>
+          </div>
         </form>
     </>
   )

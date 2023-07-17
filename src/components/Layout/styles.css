@@ -1,24 +1,39 @@
 .page {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 .outlet {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  padding: 0 200px;
 }
 
 .footer {
   display: flex;
-  background-color: black;
+  background-color: rgb(41, 121, 225);
   color: azure;
   display: flex;
   width: 100%;
   height: 3em;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+}
+
+.theme-wrapper {
+  background-color: maroon;
+}
+
+.light {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.dark {
+  background-color: rgb(58, 58, 58);
+  color: white;
 }
